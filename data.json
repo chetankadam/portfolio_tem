@@ -1,0 +1,8 @@
+{
+	"menuItems": [
+		{"itemID": "about", "itemLink": "#", "itemAnchor": "About Chetan"},
+		{"itemID": "experience", "itemLink": "#", "itemAnchor": "Experience"},
+		{"itemID": "portfolios", "itemLink": "#", "itemAnchor": "Portfolios"},
+		{"itemID": "hire", "itemLink": "#", "itemAnchor": "Hire this Guy Immediately"}
+	]
+}

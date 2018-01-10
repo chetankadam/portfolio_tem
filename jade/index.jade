@@ -1,0 +1,47 @@
+doctype html
+html.no-js
+	head
+		include includes/head.jade
+	title Our Project
+
+	body
+		include includes/mixin.jade
+
+
+
+		.container-fluid
+			.row
+				.col-md-3#left-bar
+					include includes/header.jade
+
+				.col-md-9#content
+
+					h1 My name is Chetan Dattatraya Kadam, and I enjoy meeting new people and finding ways to help them have an uplifting experience.
+
+					.row
+						.col-md-6
+
+							+skinlinfo(
+							'FrontEnd',
+							'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+							'images/frontend-icons.png'
+							)
+
+							+skills('HTML5','CSS3','Jade','SASS','JavaScript','XML')
+
+						.col-md-6
+
+							+skinlinfo(
+							'FrontEnd',
+							'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+							'images/frontend-icons.png'
+							)
+
+							+skills('SQL','Jango','mySQL','NodeJS')
+
+
+
+
+
+		include includes/footer.jade
+

@@ -1,0 +1,16 @@
+mixin mainNav () 
+	ul#main-nav-menu
+		for menuItem in menuItems
+			li(id=menuItem.itemID)
+				a(href=menuItem.itemLink)= menuItem.itemAnchor
+
+mixin skinlinfo(skillTitle, skillDesc, src)
+	h2= skillTitle
+	p= skillDesc
+
+	img.skill-icons(src=src)
+
+mixin skills(...items)
+	ul(class='skills')
+		each item in items
+			li=item
