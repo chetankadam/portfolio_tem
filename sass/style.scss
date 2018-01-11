@@ -1,0 +1,25 @@
+// Color Variables
+
+$name-color:				#fff;
+$side-bar-font-color:		#ababab;
+$side-bar-hover-color:		#493f43;
+$dark-color:				#2f292b;
+
+body, html {
+	background: #FC466B;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */	
+	background: linear-gradient(to top, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+a, p, h1, h2, h3, h4, h5, h6, ul li {
+	text-decoration: none;
+}
+
+a {
+	color: $name-color;
+}
+
+li {
+	list-style: none;
+}

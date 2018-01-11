@@ -15,10 +15,14 @@ var gulp = require('gulp'),
 
 app.use(express.static(path.resolve('./build' )));
 
-
 app.listen('9000', function() {
 	gutil.log('listinging on', '9000');
 })
+
+
+/*--------------------------------------
+Convert JADE to HTML task 
+---------------------------------------*/
 
 gulp.task('html',function() {
 	gulp.src('jade/index.jade')
@@ -32,13 +36,21 @@ gulp.task('html',function() {
 	.pipe(livereload())
 });
 
+/*--------------------------------------
+Convert saas to css task 
+---------------------------------------*/
+
 gulp.task('css',function() {
-	gulp.src(['css/*.css','sas/*.sass'])
+	gulp.src(['css/*.css','sass/*.scss'])
 		.pipe(sass().on('error',sass.logError))
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('build/css'))
 		.pipe(livereload())
 });
+
+/*--------------------------------------
+Convert Image tasks
+---------------------------------------*/
 
 gulp.task('images',function() {
 	gulp.src('images/*')
@@ -46,22 +58,29 @@ gulp.task('images',function() {
 		.pipe(livereload())
 })
 
+/*--------------------------------------
+Convert JS task 
+---------------------------------------*/
+
+
 gulp.task('js',function() {
 	gulp.src('js/**')
 		.pipe(gulp.dest('build/js'))
 		.pipe(livereload())
 })
 
+
+/*--------------------------------------
+Watch command
+---------------------------------------*/
+
 gulp.task('watch', ['build'], function() {
 
 	livereload.listen();
 
 	gulp.watch('jade/**/*.jade',['html']);
-	gulp.watch('sass/*.sass',['css']);
+	gulp.watch('sass/*.scss',['css']);
 	gulp.watch('images/*',['images']);
 })
 
 gulp.task('build',['html','css','images','js']);
-
-
-
