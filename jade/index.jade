@@ -9,33 +9,35 @@ html.no-js
 
 		.container-fluid
 			.row
-				.col-md-3#left-bar
+				.col-md-3.left-section#left-bar
 					include includes/header.jade
 
-				.col-md-9#content
+				.col-md-9.p-3#content
 
-					h4 My name is Chetan Dattatraya Kadam, and I enjoy meeting new people and finding ways to help them have an uplifting experience.
+					h4(class='hero-heading') My name is Chetan, and I enjoy meeting new people and finding ways to help them have an uplifting experience.
 
 					.row
 						.col-md-6
 
 							+skinlinfo(
-							'FrontEnd',
-							'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-							'images/frontend-icons.png'
-							)
+							'Front end',
+							'Lorem Ipsum is simply dummy text of the printing and typesetting industry')
 
 							+skills('HTML5','CSS3','Jade','SASS','JavaScript','XML')
 
 						.col-md-6
 
 							+skinlinfo(
-							'FrontEnd',
-							'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-							'images/frontend-icons.png'
-							)
+							'Back end',
+							'Lorem Ipsum is simply dummy text of the printing and typesetting industry')
 
 							+skills('SQL','Jango','mySQL','NodeJS')
+
+					.row
+						.col-md-12
+							for movie in movieList
+								+movie-card(movie)
+						
 
 
 		include includes/footer.jade

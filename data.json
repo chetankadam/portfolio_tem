@@ -6,3 +6,22 @@
 		{"itemID": "hire", "itemLink": "#", "itemAnchor": "Hire this Guy Immediately"}
 	]
 }
+
+- var movieList = [
+	{
+		"title": "Ocean's Eleven",
+		"cast": ["Julia Roberts", "George Clooney", "Brad Pitt", "Andy Garcia"],
+		"genres": ["Comedy", "Thriller"],
+		"posterImage": "/img/oceans-eleven",
+		"imdbURL": "http://www.imdb.com/title/tt0240772/",
+		"rating": "9.2"
+	},
+	{
+		"title": "Pirates of the Caribbean",
+		"cast": ["Johnny Depp", "Keira Knightley", "Orlando Bloom"],
+		"genres": ["Adventure", "Comedy"],
+		"posterImage": "/img/pirates-caribbean",
+		"imdbURL": "http://www.imdb.com/title/tt0325980/",
+		"rating": "9.7"
+	}
+];

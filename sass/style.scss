@@ -6,20 +6,127 @@ $side-bar-hover-color:		#493f43;
 $dark-color:				#2f292b;
 
 body, html {
+	height: 100%;
 	background: #FC466B;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */	
 	background: linear-gradient(to top, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Noto Sans'
+}
+
+.left-bar {
+	height: 100%;
 }
 
 
 a, p, h1, h2, h3, h4, h5, h6, ul li {
 	text-decoration: none;
+
 }
 
 a {
 	color: $name-color;
 }
 
-li {
-	list-style: none;
+li { list-style: none; }
+
+
+
+.left-section {	background-color: $dark-color; }
+
+.user-profile { 
+	margin-top: 50px;
+	text-align: center;
+
+	#name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+
+	img {
+		width: 140px;
+	}
+
+	.sub-title { 
+		color: #fff; 
+		font-size: 14px;
+	}
+
+	.user-img {
+		width: 140px;
+	    height: 140px;
+	    overflow: hidden;
+	    border-radius: 50%;
+	    margin: 0 auto;
+	    img {
+	    	width: 100%;
+	    }
+	}
+
+}
+
+#content {
+	background-image: linear-gradient(0deg, rgba(37, 36, 36, 0.52), #e9ecef), url(../images/chetan.jpg);
+	background-size: cover;
+	color: #000;
+
+	.hero-heading {
+		padding: 50px 0px !important
+	}
+}
+
+#social-media {
+	margin: 30px 0;
+	font-size: 0;
+	img {
+		width: 30px;
+		height: auto;
+	}
+	li {
+		display: inline-block;
+		margin: 0 5px 0 0;
+	}
+}
+
+.container-fluid {
+	height: 100%;
+	> .row {
+		height: 100%;
+	}
+}
+
+.user-menu-data {
+
+}
+
+.user-menu-data {
+	padding-left: 0;
+	a {
+		padding: 5px 5px;
+		display: block;
+		margin: 5px 0;
+		background-color: linear-gradient(to right, red 50%, blue 50%);
+		 background-size: 200% 100%;
+    	background-position:left bottom;
+		transition: all .5s ease-out;
+
+		&:hover {
+			background-color: #29ffc6;
+			text-decoration: none;
+			color: #000;
+		}
+	}
+
+	.about {
+		border-left: 5px solid #29ffc6;
+	}
+	.experience {
+		border-left: 5px solid #29ffc6;
+	}
+	.portfolios {
+		border-left: 5px solid #29ffc6;
+	}
+	.hire {
+		border-left: 5px solid #29ffc6;
+	}
 }

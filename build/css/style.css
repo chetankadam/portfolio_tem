@@ -7171,12 +7171,17 @@ a.text-dark:focus, a.text-dark:hover {
 
 
 body, html {
+  height: 100%;
   background: #FC466B;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #3F5EFB, #FC466B);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #3F5EFB, #FC466B);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Noto Sans'; }
+
+.left-bar {
+  height: 100%; }
 
 a, p, h1, h2, h3, h4, h5, h6, ul li {
   text-decoration: none; }
@@ -7186,3 +7191,72 @@ a {
 
 li {
   list-style: none; }
+
+.left-section {
+  background-color: #2f292b; }
+
+.user-profile {
+  margin-top: 50px;
+  text-align: center; }
+  .user-profile #name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem; }
+  .user-profile img {
+    width: 140px; }
+  .user-profile .sub-title {
+    color: #fff;
+    font-size: 14px; }
+  .user-profile .user-img {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto; }
+    .user-profile .user-img img {
+      width: 100%; }
+
+#content {
+  background-image: linear-gradient(0deg, rgba(37, 36, 36, 0.52), #e9ecef), url(../images/chetan.jpg);
+  background-size: cover;
+  color: #000; }
+  #content .hero-heading {
+    padding: 50px 0px !important; }
+
+#social-media {
+  margin: 30px 0;
+  font-size: 0; }
+  #social-media img {
+    width: 30px;
+    height: auto; }
+  #social-media li {
+    display: inline-block;
+    margin: 0 5px 0 0; }
+
+.container-fluid {
+  height: 100%; }
+  .container-fluid > .row {
+    height: 100%; }
+
+.user-menu-data {
+  padding-left: 0; }
+  .user-menu-data a {
+    padding: 5px 5px;
+    display: block;
+    margin: 5px 0;
+    background-color: linear-gradient(to right, red 50%, blue 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all .5s ease-out; }
+    .user-menu-data a:hover {
+      background-color: #29ffc6;
+      text-decoration: none;
+      color: #000; }
+  .user-menu-data .about {
+    border-left: 5px solid #29ffc6; }
+  .user-menu-data .experience {
+    border-left: 5px solid #29ffc6; }
+  .user-menu-data .portfolios {
+    border-left: 5px solid #29ffc6; }
+  .user-menu-data .hire {
+    border-left: 5px solid #29ffc6; }

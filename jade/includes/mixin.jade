@@ -1,16 +1,38 @@
 mixin mainNav () 
-	ul#main-nav-menu
+	ul#main-nav-menu.user-menu-data
 		for menuItem in menuItems
-			li(id=menuItem.itemID)
+			li(id=menuItem.itemID,class=menuItem.itemID)
 				a(href=menuItem.itemLink)= menuItem.itemAnchor
 
-mixin skinlinfo(skillTitle, skillDesc, src)
+mixin skinlinfo(skillTitle, skillDesc)
 	h5= skillTitle
 	p= skillDesc
-
-	img.skill-icons(src=src)
 
 mixin skills(...items)
 	ul(class='skills')
 		each item in items
 			li=item
+
+mixin movie-object(movie)
+	ul
+		li= movie
+
+
+mixin movie-card(movie)
+	div.movie-card
+		h2.movie-title= movie.title
+    	img.movie-poster(src=movie.posterImage)
+    	h3 Cast
+    	ul.cast
+     		each actor in movie.cast
+      		li= actor
+    	div.rating
+    		if movie.rating > 5
+        		img(src="img/thumbs-up")
+      		else
+        		img(src="img/thumbs-down")
+        ul.genre
+        	each genre in movie.genres
+        		li= genre
+
+        
